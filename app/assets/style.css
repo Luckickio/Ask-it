@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+    font-size:25px!important;
+    line-height: 0;
+}
+
+.navbar {
+    background: #003060!important;
+    display:flex;
+    justify-content:center!important;
+}
+
+.navbar > div {
+    max-width:max-content;
+}
+
+.go-up {
+    position: fixed;
+    z-index: 314159265359; 
+    top: 80vh;
+    right: 0;
+    color: #fff;
+    padding: 25px 50px 25px 40px;
+    background: #003060;
+    border-radius: 2500px 0px 0px 2500px;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.go-up::before {
+    content: "";
+    position:absolute;
+    right:10px;
+    top:50%;
+    transform:translateY(-50%);
+    height: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 25px;
+    background-image: url("./flèche-blanche.svg");
+}
+.go-up::after {
+    position:absolute;
+    content:"";
+    width:25px;
+    aspect-ratio: 1/1;
+    background:#8c65ff;
+    border: solid 2px rgba(255, 255, 255, 0.867);
+    border-radius:1000px;
+    top:0;
+    left:0;
+    transform: translate(-10%, -10%);
+}
+
+.container {
+    margin-bottom:90px;
+}
+
+@media (max-width: 768px) {
+    .go-up {
+        width:100%;
+        top:auto;
+        bottom:0!important;
+        border-radius: 0!important;
+        max-height:75px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .go-up::after, .go-up::before {
+        display:none!important;}
+}
